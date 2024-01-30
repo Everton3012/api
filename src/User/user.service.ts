@@ -56,7 +56,6 @@ export class UserService {
 
     password = await bcrypt.hash(password, salt);
 
-
     return this.prisma.user.update({
       data,
       where: {
